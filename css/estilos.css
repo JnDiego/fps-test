@@ -14,10 +14,6 @@ body {
     justify-content: center;
 }
 
-.container:hover .square {
-    animation-play-state: paused;
-}
-
 .square {
     width: 200px;
     height: 200px;
