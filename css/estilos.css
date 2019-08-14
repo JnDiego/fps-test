@@ -1,0 +1,71 @@
+body {
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    height: 100vh;
+    color: white;
+    font-family: Arial;
+}
+
+.container {
+    border: 1px solid red;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container:hover .square {
+    animation-play-state: paused;
+}
+
+.square {
+    width: 200px;
+    height: 200px;
+    background: #7dc900;
+    margin: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* transition: .3s; */
+    animation-name: squareanimation;
+    animation-duration: 1s;
+    /* animation-delay: 1s; */
+    /* animation-iteration-count: 2; */
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    /* animation-direction: reverse; */
+    animation-direction: alternate;
+    /* animation-fill-mode: forwards; */
+    /* animation-play-state: running; */
+    /* animation-timing-function: cubic-bezier(1, 1, 1, 1); */
+    /* animation-timing-function: ease-in; */
+    /* animation-timing-function: ease-out; */
+    /* animation-timing-function: ease-in-out; */
+    /* animation-timing-function: linear; */
+    position: relative;
+}
+
+.square.a {
+    animation-timing-function: steps(120);
+}
+.square.b {
+    animation-timing-function: steps(60);
+}
+.square.c {
+    animation-timing-function: steps(30);
+}
+.square.d {
+    animation-timing-function: steps(10);
+}
+
+@keyframes squareanimation {
+    0% {
+        /* opacity: 1; */
+        top: 0;
+    }
+    100% {
+        /* opacity: 0; */
+        top: calc(100% - 240px);
+    }
+}
